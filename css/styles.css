@@ -1,3 +1,23 @@
-*body{
+:root{
+    --primary-bg-color:#252525;
+    --secondary-bg-color:#c09578;
+    --light-bg-color:#fcf5eb;
+    --dark-bg-color:#101010;
+    --text-color:#fff;
+    --primary-color:#c09578;
+    --secondary-color:#626262;
+    --light-color:#fcf5eb;
+}
+
+*{
     font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background-color:antiquewhite;
+    color: var(--text-color);
+}
+
+.navbar{
+   background-color: var(--primary-color);
 }
