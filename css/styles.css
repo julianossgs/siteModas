@@ -24,6 +24,10 @@ body{
    background-color: var(--primary-color);
 }
 
+.navbar-brand img{
+    border-radius: 50%;
+}
+
 #navbar .btn{
    background-color: var(--primary-color-items);
    color: var(--text-color);
