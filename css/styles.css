@@ -7,6 +7,7 @@
     --primary-color:#c09578;
     --secondary-color:#626262;
     --light-color:#fcf5eb;
+    --primary-color-items:#9945e0;
 }
 
 *{
@@ -18,6 +19,68 @@ body{
     color: var(--text-color);
 }
 
+/*Navbar*/
 .navbar{
    background-color: var(--primary-color);
+}
+
+#navbar .btn{
+   background-color: var(--primary-color-items);
+   color: var(--text-color);
+}
+
+#navbar .btn:hover{
+    color: var(--primary-color-items) !important;
+    background-color: var(--text-color) !important;
+    border: 1px solid var(--primary-color-items);
+}
+
+#active{
+    color: var(--primary-color-items);
+    font-weight: bold;
+}
+
+#active:hover{
+    font-weight: 300;
+}
+
+.nav-link:hover{
+    font-weight: bold;
+    color:var(--primary-color-items);
+}
+
+.dropdown-item:hover{
+    color:var(--primary-color-items);
+    font-weight: bold;
+}
+
+.dropdown-menu a:focus{
+    background-color:var(--text-color);
+}
+
+/*Modal do cadastro de nova conta da navbar*/
+#modalCadastro h2{
+    color: var(--primary-color-items);
+    font-weight: bold;
+}
+
+/*Modal produtos em promoção da navbar*/
+#modalProducts h1{
+    color: var(--primary-color-items);
+    font-weight: bold;
+}
+
+.card .card-title{
+    color: var(--primary-color-items);
+    font-weight: bold;
+}
+
+.card .card-subtitle{
+    color: var(--primary-color-items);
+    font-weight: 600;
+}
+
+.card .card-text{
+    color: var(--primary-color-items);
+    font-weight: 400;
 }
