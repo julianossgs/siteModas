@@ -14,11 +14,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
-    <!--Bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-
+    
     <!--Bootstrap Icons-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 
     <!--Css do projeto-->
     <link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -44,7 +45,7 @@
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                       <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a id="active" class="nav-link active" aria-current="page" href="#">Home</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="#">Moda masculina</a>
@@ -57,21 +58,163 @@
                           Categorias
                         </a>
                         <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">Faça seu cadastro</a></li>
-                          <li><a class="dropdown-item" href="#">Já tenho cadastro</a></li>
+                          <li><a class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target="#modalCadastro">Faça seu cadastro</a></li>
+                          <li><a class="dropdown-item" href="#">Minha conta</a></li>
                           <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item" href="#">Produtos em promoção</a></li>
+                          <li><a class="dropdown-item" type="button" href="#" data-bs-toggle="modal" data-bs-target="#modalProducts">Produtos em promoção</a></li>
                         </ul>
                       </li>
                      
                     </ul>
                     <form class="d-flex" role="search">
-                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                      <button class="btn btn-outline-success" type="submit">Search</button>
+                      <input class="form-control me-2" type="search" placeholder="buscar..." aria-label="Search">
+                      <button class="btn" type="submit"><i class="bi bi-search"></i></button>
                     </form>
                   </div>
                 </div>
               </nav>
+              <!--Modal do cadastro de nova conta da navbar-->
+              <div class="modal fade" id="modalCadastro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h2 class="modal-title" id="exampleModalLabel">Faça seu cadastro...</h2>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body bg-body-tertiary">
+                       <form class="row">
+                        <div class="col-12 col-md-6 mb-3">
+                          <label for="inputEmail4" class="form-label text-dark">Email</label>
+                          <input type="email" class="form-control" id="inputEmail4" placeholder="Seu email..." required>
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                          <label for="inputPassword4" class="form-label text-dark">Senha</label>
+                          <input type="password" class="form-control" id="inputPassword4" placeholder="Sua senha..." maxlength="6" minlength="6" required>
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                          <label for="inputAddress" class="form-label text-dark">Nome</label>
+                          <input type="text" class="form-control" id="inputAddress" placeholder="Seu nome..." maxlength="30" minlength="3" required>
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                          <label for="inputAddress" class="form-label text-dark">Endereço</label>
+                          <input type="text" class="form-control" id="inputAddress" placeholder="Seu endereço..." maxlength="50" minlength="3" required>
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                          <label for="inputCity" class="form-label text-dark">Cidade</label>
+                          <input type="text" class="form-control" id="inputCity" placeholder="sua cidade..." required>
+                        </div>
+                        <div class="col-12 col-md-4 mb-3">
+                          <label for="inputState" class="form-label text-dark">UF</label>
+                          <select id="inputState" class="form-select">
+                            
+                            <option>MG</option>
+                            <option>SP</option>
+                            <option>RJ</option>
+                          </select>
+                        </div>
+                        <div class="col-12 col-md-3 mb-3">
+                          <label for="inputZip" class="form-label text-dark">Cep</label>
+                          <input type="text" class="form-control" id="inputZip" placeholder="Seu cep..." required>
+                        </div>
+                       </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
+                      <button type="button" class="btn btn-outline-dark">Cadastrar-se</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--Modal produtos em promoção da navbar-->
+              <div class="modal fade" id="modalProducts" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title" id="exampleModalLabel">Confira nossas promoções</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="row">
+                         <!--card 1-->
+                        <div class="col-12 col-md-3 card_items">
+                          <div class="card">
+                            <img class="card-img-top" src="img/bermuda.jpg" alt="Logo">
+                            <div class="card-body">
+                              <h5 class="card-title">Produto X</h5>
+                              <h6 class="card-subtitle mb-2">Subtitulo do card</h6>
+                              <p class="card-text">
+                                Some quick example text to build on the card title and make up the bulk of the card's content.
+                              </p>
+                              <!--botão do modal-->
+                              <button class="btn btn-outline-dark" type="button" ><i class="bi bi-currency-dollar m-1"></i>Comprar</button>
+                            </div>
+            
+                          </div>
+                        </div>
+                        <!--card 2-->
+                <div class="col-12 col-md-3 card_items">
+                  <div class="card">
+                    <img class="card-img-top" src="img/blusa.png" alt="Logo">
+                    <div class="card-body">
+                      <h5 class="card-title">Produto X</h5>
+                      <h6 class="card-subtitle mb-2">Subtitulo do card</h6>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and make up the bulk of the card's content.
+                      </p>
+                      <!--botão do modal-->
+                      <button class="btn btn-outline-dark" type="button"><i class="bi bi-currency-dollar m-1"></i>Comprar</button>
+                    </div>
+                    
+                      
+                  </div>
+                </div>
+                <!--card 3-->
+                <div class="col-12 col-md-3 card_items">
+                  <div class="card">
+                    <img class="card-img-top" src="img/camisa.jpg" alt="Logo">
+                    <div class="card-body">
+                      <h5 class="card-title">Produto X</h5>
+                      <h6 class="card-subtitle mb-2">Subtitulo do card</h6>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and make up the bulk of the card's content.
+                      </p>
+                      <!--botão do modal-->
+                      <button class="btn btn-outline-dark" type="button"><i class="bi bi-currency-dollar m-1"></i>Comprar</button>
+                    </div>
+                    
+                      
+                  </div>
+                </div>
+                <!--card 4-->
+                <div class="col-12 col-md-3 card_items">
+                  <div class="card">
+                    <img class="card-img-top" src="img/bermudap.jpg" alt="Logo">
+                    <div class="card-body">
+                      <h5 class="card-title">Produto X</h5>
+                      <h6 class="card-subtitle mb-2">Subtitulo do card</h6>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and make up the bulk of the card's content.
+                      </p>
+                      <!--botão do modal-->
+                      <button class="btn btn-outline-dark" type="button"><i class="bi bi-currency-dollar m-1"></i>Comprar</button>
+                    </div>
+                    
+                      
+                  </div>
+                </div>
+
+                      </div>
+                     
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+
         </header>
         <main>
             <section>
