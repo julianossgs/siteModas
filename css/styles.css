@@ -88,3 +88,44 @@ body{
     color: var(--primary-color-items);
     font-weight: 400;
 }
+
+/*Carousel*/
+.carousel-title, .carousel-text{
+   color: var(--primary-color-items);
+   font-weight: bold;
+}
+
+#carousel img{
+    height: 350px;
+}
+
+
+/* Média */
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+
+   /*Carousel*/
+    #carousel img{
+         height: 653px;
+    }
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+
+}
+
+/* X-Large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+
+}
+
+/*XX-Large devices (larger desktops, 1400px and up)*/
+@media (min-width: 1400px) {
+
+}
