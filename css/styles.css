@@ -99,6 +99,41 @@ body{
     height: 350px;
 }
 
+/* card masculino*/
+
+.title-cardMan{
+   padding-top: 25px;
+   color: var(--primary-color-items);
+   font-weight: bold;
+}
+
+.favorite-icon{
+    font-size: 1.6rem;
+    margin-left: 120px;
+    color: var(--primary-color-items);
+}
+
+#cardMan .btn{
+    background-color: var(--primary-color-items);
+    color: var(--text-color);
+ }
+ 
+ #cardMan .btn:hover{
+     color: var(--primary-color-items) !important;
+     background-color: var(--text-color) !important;
+     border: 1px solid var(--primary-color-items);
+ }
+
+ .modal-text-favorites{
+    color: var(--primary-color-items) !important;
+    cursor: pointer;
+ }
+
+ .modal-text-favorites:hover{
+    font-weight: bold;
+    font-size: 1.2rem;
+ }
+
 
 /* Média */
 /* Small devices (landscape phones, 576px and up)*/
@@ -111,7 +146,7 @@ body{
 
    /*Carousel*/
     #carousel img{
-         height: 653px;
+         height: 650px;
     }
 }
 
