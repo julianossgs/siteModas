@@ -99,9 +99,10 @@ body{
     height: 350px;
 }
 
-/* card masculino*/
 
-.title-cardMan{
+/* card masculino / card feminino*/
+
+.title-card{
    padding-top: 25px;
    color: var(--primary-color-items);
    font-weight: bold;
@@ -113,12 +114,12 @@ body{
     color: var(--primary-color-items);
 }
 
-#cardMan .btn{
+.card_items .btn{
     background-color: var(--primary-color-items);
     color: var(--text-color);
  }
  
- #cardMan .btn:hover{
+ .card_items .btn:hover{
      color: var(--primary-color-items) !important;
      background-color: var(--text-color) !important;
      border: 1px solid var(--primary-color-items);
@@ -132,6 +133,17 @@ body{
  .modal-text-favorites:hover{
     font-weight: bold;
     font-size: 1.2rem;
+ }
+
+ .modal-button-favorites button{
+    background-color: var(--primary-color-items);
+    color: var(--text-color);
+ }
+
+ .modal-button-favorites button:hover{
+    color: var(--primary-color-items) !important;
+    background-color: var(--text-color) !important;
+    border: 1px solid var(--primary-color-items);
  }
 
 
